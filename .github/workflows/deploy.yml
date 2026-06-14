@@ -1,0 +1,20 @@
+name: Deployment Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Build Application
+        run: echo "Building Application..."
+
+      - name: Deploy Application
+        run: echo "Deploying Application..."
